@@ -23,8 +23,8 @@ lenTailStrict xs = helper xs 0
 
 testList = [1..100000]
 
-main :: IO ()
-main = do
+testLen :: IO ()
+testLen = do
     putStrLn "Testing len of list with naive, tail call, and builtin."
     putStrLn $ "List has max element w/ power of " ++ show (logBase 10 (last testList))
     putStrLn "1) naive length'"
@@ -36,3 +36,28 @@ main = do
     putStrLn "4) builtin length"
     time $ length testList `seq` return ()
     putStrLn "Done!"
+
+-- 3) compute mean of list
+meanList :: Integral a => [a] -> Double
+meanList [] = 0
+meanList (x:xs) = sum_ / length_
+                    where
+                sum_ = fromIntegral $ x + sum xs
+                length_ = fromIntegral $ length (x:xs)
+
+-- 4) palindrome creation
+makePalindrome :: [a] -> [a]
+makePalindrome xs = xs ++ (reverse' xs)
+                        where
+                    reverse' [] = []
+                    reverse' (d:ds) = reverse' ds ++ [d]
+
+-- 5) checking if a list is a palindrome
+checkPalindrome :: Eq a => [a] -> Bool
+checkPalindrome xs = xs == reverse xs
+
+
+main :: IO ()
+main = do
+    print "Ch 3. Exercises"
+    testLen

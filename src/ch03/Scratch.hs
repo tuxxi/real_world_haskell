@@ -1,3 +1,5 @@
+module Scratch where
+
 -- list type (recursive)
 data List a = Cons a (List a)
             | Nil
