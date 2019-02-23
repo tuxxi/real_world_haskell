@@ -1,0 +1,42 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 7e7a52c86bb596ca24edfc7b1a0b5a72fbd33894cce47efeedfe96140ad32744
+
+name:           rwh-excercises
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/rwh-excercises#readme>
+homepage:       https://github.com/tuxxi/rwh-excercises#readme
+bug-reports:    https://github.com/tuxxi/rwh-excercises/issues
+author:         tuxxi
+maintainer:     aidan@sojourner.me
+license:        BSD3
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/tuxxi/rwh-excercises
+
+library
+  other-modules:
+      Paths_rwh_excercises
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable ch03
+  main-is: Main.hs
+  other-modules:
+      Paths_rwh_excercises
+  hs-source-dirs:
+      src/ch03
+  ghc-options: -Wall -Werror -O2
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
