@@ -5,5 +5,4 @@ inp = interact wordCount
     where wordCount input = show (length (lines input)) ++ "\n"
 
 main :: IO ()
-main = do 
-    inp 
+main = inp 

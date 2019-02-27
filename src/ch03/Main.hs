@@ -21,6 +21,7 @@ lenTailStrict xs = helper xs 0
             helper [] n = n
             helper (_:ds) n = helper ds $! (n + 1)
 
+testList :: [Double]
 testList = [1..100000]
 
 testLen :: IO ()

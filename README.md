@@ -1,2 +1,2 @@
-# rwh-excercises
-excercises from real world haskell
+# rwh-exercises
+exercises from real world haskell
