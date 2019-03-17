@@ -1,2 +1,4 @@
 # rwh-exercises
-exercises from real world haskell
+some exercises from real world haskell. 
+
+http://book.realworldhaskell.org

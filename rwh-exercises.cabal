@@ -2,13 +2,13 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 666c21b78d8e41124d4cf183a07907d2f37695f6db6ac47a88f58ad268627324
+-- hash: c8d1c61d39c122596d3f0dae2e53522ad1fe2fae5317546a48903bcab006bf31
 
 name:           rwh-exercises
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/rwh-exercises#readme>
-homepage:       https://github.com/tuxxi/rwh-exercises#readme
-bug-reports:    https://github.com/tuxxi/rwh-exercises/issues
+homepage:       https://github.com/tuxxi/real_world_haskell#readme
+bug-reports:    https://github.com/tuxxi/real_world_haskell/issues
 author:         tuxxi
 maintainer:     aidan@sojourner.me
 license:        BSD3
@@ -19,13 +19,14 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/tuxxi/rwh-exercises
+  location: https://github.com/tuxxi/real_world_haskell
 
 library
   other-modules:
       Paths_rwh_exercises
   hs-source-dirs:
       src
+  ghc-options: -Wall -Werror -O -Wno-unused-top-binds -Wno-missing-signatures
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
@@ -38,7 +39,19 @@ executable ch03
       Paths_rwh_exercises
   hs-source-dirs:
       src/ch03
-  ghc-options: -Wall -Werror -O2 -Wno-unused-top-binds
+  ghc-options: -Wall -Werror -O -Wno-unused-top-binds -Wno-missing-signatures
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable ch04
+  main-is: InteractWith.hs
+  other-modules:
+      SplitLines
+      Paths_rwh_exercises
+  hs-source-dirs:
+      src/ch04
+  ghc-options: -Wall -Werror -O -Wno-unused-top-binds -Wno-missing-signatures
   build-depends:
       base >=4.7 && <5
   default-language: Haskell2010
